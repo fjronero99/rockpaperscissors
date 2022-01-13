@@ -1,20 +1,27 @@
 // $(".choices").hide();
-let randomNumber =0; 
- let computerChoice; 
-let result;
 
-$(".play").click(function()
-{ let userChoice= $(".input").val();
- $(".userChoice").text(userChoice);
- let randomNumber=Math.ceil(Math.random() * 3);
- console.log(randomNumber);
- if(randomNumber===1)
- { computerChoice = "rock"; $(".computerChoice").text(computerChoice); } 
- else if(randomNumber===2)
- { computerChoice = "paper"; $(".computerChoice").text(computerChoice); }
- else if(randomNumber===3)
- { computerChoice = "paper"; $(".computerChoice").text(computerChoice); }
- 
+
+$(".play").click(function () {
+    let randomNumber = 0;
+    let computerChoice;
+    let result;
+
+  
+  let userChoice = $(".input").val();
+  $(".userChoice").text(userChoice);
+    randomNumber = Math.ceil(Math.random() * 3);
+  console.log(randomNumber);
+  if (randomNumber === 1) {
+    computerChoice = "rock";
+    $(".computerChoice").text(computerChoice);
+  } else if (randomNumber === 2) {
+    computerChoice = "paper";
+    $(".computerChoice").text(computerChoice);
+  } else if (randomNumber === 3) {
+    computerChoice = "paper";
+    $(".computerChoice").text(computerChoice);
+  }
+
   if (userChoice === "rock" && computerChoice === "rock") {
     result = "It's a tie!";
   } else if (userChoice === "paper" && computerChoice === "rock") {
@@ -36,8 +43,3 @@ $(".play").click(function()
   }
   $(".result").text(result);
 });
-
-
-
-
-  //text of win or lose
