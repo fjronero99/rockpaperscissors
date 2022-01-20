@@ -1,15 +1,13 @@
 // $(".choices").hide();
 
-
 $(".play").click(function () {
-    let randomNumber = 0;
-    let computerChoice;
-    let result;
+  let randomNumber = 0;
+  let computerChoice;
+  let result;
 
-  
   let userChoice = $(".input").val();
   $(".userChoice").text(userChoice);
-    randomNumber = Math.ceil(Math.random() * 3);
+  randomNumber = Math.ceil(Math.random() * 3);
   console.log(randomNumber);
   if (randomNumber === 1) {
     computerChoice = "rock";
@@ -21,7 +19,7 @@ $(".play").click(function () {
     computerChoice = "paper";
     $(".computerChoice").text(computerChoice);
   }
-
+  
   if (userChoice === "rock" && computerChoice === "rock") {
     result = "It's a tie!";
   } else if (userChoice === "paper" && computerChoice === "rock") {
@@ -43,3 +41,32 @@ $(".play").click(function () {
   }
   $(".result").text(result);
 });
+
+function getRandomComputerChoice() {
+  let randomNumber = 0;
+  let computerChoice;
+  let result;
+
+  let userChoice = $(".input").val();
+  $(".userChoice").text(userChoice);
+  randomNumber = Math.ceil(Math.random() * 3);
+  console.log(randomNumber);
+  if (randomNumber === 1) {
+    computerChoice = "rock";
+    $(".computerChoice").text(computerChoice);
+  } else if (randomNumber === 2) {
+    computerChoice = "paper";
+    $(".computerChoice").text(computerChoice);
+  } else if (randomNumber === 3) {
+    computerChoice = "paper";
+    $(".computerChoice").text(computerChoice);
+  }
+  let answer = getRandomComputerChoice();
+
+console.log(answer);
+
+}
+
+let answer = getRandomComputerChoice();
+
+console.log(answer);
